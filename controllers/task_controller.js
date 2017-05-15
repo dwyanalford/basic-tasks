@@ -21,7 +21,7 @@ router.post("/", function(req, res) {
   task.insertOne([
     "task", "completed"
   ], [
-    req.body.task, req.body.completed
+    req.body.name, req.body.completed
   ], function() {
     res.redirect("/");
   });
