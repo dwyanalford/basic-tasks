@@ -1,0 +1,29 @@
+{
+  "name": "basic-tasks",
+  "version": "1.0.0",
+  "description": "basic task manager to make tasks and then complete it using mysql, nodejs, express and handlebars",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwyanalford/basic-tasks.git"
+  },
+  "keywords": [
+    "tasks"
+  ],
+  "author": "Dwyan Alford",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dwyanalford/basic-tasks/issues"
+  },
+  "homepage": "https://github.com/dwyanalford/basic-tasks#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.8",
+    "mysql": "^2.13.0"
+  }
+}

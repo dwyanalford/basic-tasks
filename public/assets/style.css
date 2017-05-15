@@ -1,0 +1,10 @@
+body{
+	background-color: #ADDEFC;
+}
+.border_right{
+	border-right: 1px solid #fff;
+	padding-right: 10px;
+}
+.row{
+	padding-top: 30px;
+}

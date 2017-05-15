@@ -1,0 +1,57 @@
+
+    <div class="container">
+      <div class="row"><h1><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>&nbsp;Tasks App by Dwyan</h1></div>
+      <div class="row">
+        <div class="col-md-1 border_right"></div>
+        
+        <div class="col-md-3 border_right white">
+          <h3>Tasks To Do</h3>
+
+          <ol>
+            {{#each tasks}}
+              {{#unless this.completed}}
+                <li>
+                  {{this.task}}
+
+                  <form action="/{{this.id}}?_method=PUT" method="POST">
+                    <input type="hidden" name="completed" value="true">
+                    <button type="submit">complete</button>
+                  </form>
+                </li>
+              {{/unless}}
+            {{/each}}
+          </ol>
+
+        </div>
+        {{!-- add task here in this column --}}
+        <div class="col-md-4 border_right">
+          <h2>Add a Task</h2>
+          <form class="create-update-form" action="/" method="POST">
+
+            <div class="form-group">
+              <label for="enterTask">Entry:</label>
+              <input type="text" id="enterTask" name="name">
+            </div>
+
+            <button type="submit">Add Task</button>
+          </form>
+        </div>
+        
+        <div class="col-md-3 border_right">
+          <h3>Tasks Completed</h3>
+
+          <ul>
+          {{#each tasks}}
+            {{#if this.completed}}
+                <li id="task-completed-text">{{this.task}}</li>
+                <div id="task-date-complete">{{this.today}}</div>
+            {{/if}}
+          {{/each}}
+        </ul>
+
+
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+
