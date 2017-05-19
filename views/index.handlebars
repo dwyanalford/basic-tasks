@@ -10,14 +10,11 @@
           <ol>
             {{#each tasks}}
               {{#unless this.completed}}
-                <li>
-                  {{this.task}}
-
-                  <form action="/{{this.id}}?_method=PUT" method="POST">
+                <li>{{this.task}}</li>
+                <form action="/{{this.id}}?_method=PUT" method="POST">
                     <input type="hidden" name="completed" value="true">
                     <button type="submit">complete</button>
                   </form>
-                </li>
               {{/unless}}
             {{/each}}
           </ol>
